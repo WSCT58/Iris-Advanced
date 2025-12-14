@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import ListedColormap
-from config import cfg
+from src.config import cfg  # ✅ 统一用这个！
 
 def run(data, models):
     print("🎨 [Task 1] 生成 2D 9分类器对比图...")
@@ -42,3 +42,4 @@ def run(data, models):
     plt.tight_layout()
     plt.savefig(f"{cfg.OUTPUT_DIR}/task1_2d_comparison.png")
     print(f"✅ 保存完毕: {cfg.OUTPUT_DIR}/task1_2d_comparison.png")
+    cfg.open_file("task1_2d_comparison.png")
